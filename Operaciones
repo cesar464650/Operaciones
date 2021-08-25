@@ -1,0 +1,38 @@
+#include <stdio.h>
+int main (void)
+{
+	int num1, num2;
+	float res;
+	int d;
+	
+	printf("indica el primer valor\n");
+	scanf("%d",&num1);
+	printf("indica el segundo valor\n");
+	scanf("%d",&num2);
+	
+	printf("Indique la operacion que desea hacer:\n 1) suma\n 2) resta\n 3) multiplicacion\n 4) division\n");
+	scanf("%d",&d);
+	
+	res=0;
+	switch(d)
+	{
+	case 1:
+	    res= num1+num2;
+		break;
+	case 2:
+		res= num1-num2;
+		break;
+	case 3:
+		res= num1*num2;
+		break;
+	case 4:
+		res=(float)num1/(float)num2;
+		break;
+	default:
+   	printf("Opcion invalida");
+	}
+	
+	printf("El resultado de la operacion seleccionada es: %.2f",res);
+	
+	return 0;
+}
